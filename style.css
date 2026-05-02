@@ -380,7 +380,7 @@ body {
 .zone {
   position: fixed;
   top: 0; bottom: 0;
-  width: 35%;
+  width: 15%;
   z-index: 50;
 }
 .zone--left  { left: 0;  cursor: w-resize; }
@@ -411,5 +411,5 @@ body {
   .present__base { width: 110px; height: 85px; }
   .present__lid  { width: 120px; }
   .present__reveal { width: 130px; }
-  .zone { width: 35%; }
+  .zone { width: 15%; }
 }
