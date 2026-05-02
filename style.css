@@ -7,11 +7,11 @@
 }
 
 :root {
-  --rose:    #f472b6;
-  --rose-dim:#7c2d4a;
-  --gold:    #fbbf24;
-  --cream:   #fdf4e7;
-  --muted:   #9d6b7a;
+  --rose:    #4a7c59;
+  --rose-dim:#2b4a35;
+  --gold:    #c8a96e;
+  --cream:   #f5ede0;
+  --muted:   #7a9e87;
 }
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -40,7 +40,7 @@ body {
 
 .overlay {
   position: absolute; inset: 0;
-  background: rgba(10, 4, 8, 0.62);
+  background: rgba(6, 14, 9, 0.65);
   pointer-events: none;
 }
 
@@ -171,13 +171,13 @@ body {
   color: var(--cream); opacity: 0.85;
   line-height: 1.7;
   padding: 0.55rem 1.2rem;
-  border: 1px solid rgba(244,114,182,0.18);
+  border: 1px solid rgba(74,124,89,0.25);
   border-radius: 40px;
-  background: rgba(244,114,182,0.06);
+  background: rgba(74,124,89,0.08);
   backdrop-filter: blur(4px);
   transition: background 0.25s;
 }
-.love-list li:hover { background: rgba(244,114,182,0.14); }
+.love-list li:hover { background: rgba(74,124,89,0.18); }
 
 .stagger-item { opacity: 0; }
 .anim-rise { animation: rise 0.5s ease forwards; }
@@ -236,7 +236,7 @@ body {
 
 .present__base {
   width: 130px; height: 100px;
-  background: linear-gradient(135deg, #c0392b, #e74c3c);
+  background: linear-gradient(135deg, #2b4a35, #4a7c59);
   border-radius: 0 0 8px 8px;
   position: relative;
 }
@@ -245,12 +245,12 @@ body {
   position: absolute;
   top: 0; left: 50%; transform: translateX(-50%);
   width: 20px; height: 100%;
-  background: rgba(255,255,255,0.25);
+  background: rgba(255,255,255,0.2);
 }
 
 .present__lid {
   width: 140px; height: 36px;
-  background: linear-gradient(135deg, #a93226, #c0392b);
+  background: linear-gradient(135deg, #1e3528, #2b4a35);
   border-radius: 6px 6px 0 0;
   margin-left: -5px;
   position: relative;
@@ -274,8 +274,8 @@ body {
   line-height: 1;
 }
 
-#present-2 .present__base { background: linear-gradient(135deg, #1a5276, #2980b9); }
-#present-2 .present__lid  { background: linear-gradient(135deg, #154360, #1a5276); }
+#present-2 .present__base { background: linear-gradient(135deg, #3b5e35, #6a9e5a); }
+#present-2 .present__lid  { background: linear-gradient(135deg, #2a4428, #3b5e35); }
 
 .present.open .present__lid {
   transform: rotateX(-110deg) translateY(-10px);
@@ -287,8 +287,8 @@ body {
   bottom: 110%;
   left: 50%; transform: translateX(-50%);
   width: 160px;
-  background: rgba(20,8,14,0.9);
-  border: 1px solid rgba(244,114,182,0.3);
+  background: rgba(6,14,9,0.92);
+  border: 1px solid rgba(74,124,89,0.35);
   border-radius: 10px;
   padding: 0.6rem;
   text-align: center;
@@ -336,8 +336,8 @@ body {
   position: fixed;
   top: 1rem; right: 1rem;
   z-index: 200;
-  background: rgba(244,114,182,0.15);
-  border: 1px solid rgba(244,114,182,0.25);
+  background: rgba(74,124,89,0.15);
+  border: 1px solid rgba(74,124,89,0.3);
   border-radius: 50%;
   width: 40px; height: 40px;
   font-size: 1.1rem;
@@ -346,7 +346,7 @@ body {
   transition: background 0.2s;
   line-height: 1;
 }
-.mute-btn:hover { background: rgba(244,114,182,0.3); }
+.mute-btn:hover { background: rgba(74,124,89,0.3); }
 .mute-btn.muted { opacity: 0.45; }
 
 .lightbox {
@@ -385,8 +385,8 @@ body {
 }
 .zone--left  { left: 0;  cursor: w-resize; }
 .zone--right { right: 0; cursor: e-resize; }
-.zone--left:hover  { background: linear-gradient(to right,  rgba(244,114,182,0.07), transparent); }
-.zone--right:hover { background: linear-gradient(to left, rgba(244,114,182,0.07), transparent); }
+.zone--left:hover  { background: linear-gradient(to right,  rgba(74,124,89,0.1), transparent); }
+.zone--right:hover { background: linear-gradient(to left, rgba(74,124,89,0.1), transparent); }
 
 .dots {
   position: fixed;
@@ -399,7 +399,7 @@ body {
 .dot {
   width: 7px; height: 7px;
   border-radius: 50%;
-  background: rgba(244,114,182,0.3);
+  background: rgba(74,124,89,0.35);
   transition: background 0.3s, transform 0.3s;
 }
 .dot.active { background: var(--rose); transform: scale(1.5); }
