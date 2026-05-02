@@ -213,7 +213,7 @@ body {
   object-fit: cover;
   transition: transform 0.3s;
 }
-.masonry-item img:hover { transform: scale(1.03); }
+.masonry-item img:hover { transform: scale(1.05) translateY(-5px); }
 
 .presents-row {
   display: flex;
