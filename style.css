@@ -34,9 +34,17 @@ body {
   overflow: hidden;
   align-items: center;
   justify-content: center;
-  background: url('img/img1.jpeg') center/cover no-repeat;
+  background: url('img/gallery/img1.jpg') center/cover no-repeat;
 }
 .card.active { display: flex; }
+
+#card-1     { background-image: url('img/gallery/img3.jpg'); }
+#card-4     { background-image: url('img/gallery/img7.jpg'); }
+#card-7     { background-image: url('img/gallery/img12.jpeg'); }
+#card-8     { background-image: url('img/gallery/img19.jpeg'); }
+#card-9     { background-image: url('img/gallery/img22.jpeg'); }
+#card-trivia{ background-image: url('img/gallery/img25.jpeg'); }
+#card-10    { background-image: url('img/gallery/img29.jpeg'); }
 
 .overlay {
   position: absolute; inset: 0;
