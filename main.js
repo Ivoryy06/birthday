@@ -3,6 +3,7 @@
 const audio = document.getElementById('bg-audio');
 const muteBtn = document.getElementById('mute-btn');
 audio.volume = 0.5;
+document.dispatchEvent(new MouseEvent('click'));
 audio.play();
 muteBtn.addEventListener('click', e => {
     e.stopPropagation();
