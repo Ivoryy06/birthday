@@ -413,3 +413,17 @@ body {
   .present__reveal { width: 130px; }
   .zone { width: 15%; }
 }
+
+.trivia-btn {
+  width: 56px; height: 56px;
+  border-radius: 50%;
+  border: 1px solid rgba(74,124,89,0.4);
+  background: rgba(74,124,89,0.1);
+  color: var(--cream);
+  font-size: 1.1rem;
+  font-family: 'TakeCoffee','Dancing Script',serif;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.15s;
+  backdrop-filter: blur(4px);
+}
+.trivia-btn:hover { background: rgba(74,124,89,0.3); transform: scale(1.1); }

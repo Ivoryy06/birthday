@@ -131,6 +131,21 @@ function burstConfetti(config) {
     }
     draw();
 }
+// ── Trivia ────────────────────────────────────────────────────────────────────
+let triviaUnlocked = false;
+document.querySelectorAll('.trivia-btn').forEach(btn => {
+    btn.addEventListener('click', e => {
+        e.stopPropagation();
+        const val = parseInt(btn.dataset.val);
+        if (val === 10) {
+            triviaUnlocked = true;
+            goTo(cards.indexOf(document.getElementById('card-10')));
+        } else {
+            document.getElementById('trivia-msg').textContent = 'Itu ga rispek wok 😡';
+        }
+    });
+});
+
 // ── Card navigation ───────────────────────────────────────────────────────────
 const cards = Array.from(document.querySelectorAll('.card'));
 const dotsEl = document.getElementById('dots');
@@ -176,6 +191,9 @@ function playCoverEntrance() {
 }
 function goTo(index) {
     if (isAnimating || index < 0 || index >= cards.length)
+        return;
+    const triviaIndex = cards.indexOf(document.getElementById('card-trivia'));
+    if (index > triviaIndex && !triviaUnlocked)
         return;
     isAnimating = true;
     const dir = index > current ? 'left' : 'right';
