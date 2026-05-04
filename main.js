@@ -3,10 +3,7 @@
 const audio = document.getElementById('bg-audio');
 const muteBtn = document.getElementById('mute-btn');
 audio.volume = 0.5;
-audio.play().catch(() => {
-    const resume = () => { audio.play(); document.removeEventListener('click', resume); };
-    document.addEventListener('click', resume);
-});
+audio.play();
 muteBtn.addEventListener('click', e => {
     e.stopPropagation();
     audio.muted = !audio.muted;
@@ -81,7 +78,6 @@ function initConfetti(canvasId) {
     draw();
 }
 initConfetti('confetti');
-initConfetti('confetti-end');
 // ── Burst confetti (typed) ────────────────────────────────────────────────────
 function burstConfetti(config) {
     const { x, y, count = 60, colors = ['#f472b6', '#fbbf24', '#fb7185', '#a78bfa', '#34d399', '#60a5fa'], spread = 12, gravity = 0.3, } = config;
@@ -186,6 +182,10 @@ function goTo(index) {
     const animClass = dir === 'left' ? 'anim-in-left' : 'anim-in-right';
     card.classList.add(animClass);
     card.addEventListener('animationend', () => { isAnimating = false; }, { once: true });
+    if (card.id === 'card-10' && !card.dataset.confettiInit) {
+        card.dataset.confettiInit = '1';
+        requestAnimationFrame(() => initConfetti('confetti-end'));
+    }
     triggerStagger(card);
     getDots().forEach((d, i) => d.classList.toggle('active', i === current));
     zoneL.style.display = current === 0 ? 'none' : 'block';
@@ -237,7 +237,3 @@ document.querySelectorAll('.present').forEach(present => {
 // ── Init ──────────────────────────────────────────────────────────────────────
 goTo(0);
 playCoverEntrance();
-setTimeout(() => {
-    if (current === 0)
-        goTo(1);
-}, 5000);
