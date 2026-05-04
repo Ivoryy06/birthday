@@ -2,9 +2,14 @@
 // ── Audio ────────────────────────────────────────────────────────────────────
 const audio = document.getElementById('bg-audio');
 const muteBtn = document.getElementById('mute-btn');
+const splash = document.getElementById('splash');
 audio.volume = 0.5;
-document.dispatchEvent(new MouseEvent('click'));
-audio.play();
+splash.addEventListener('click', () => {
+    audio.play();
+    splash.style.opacity = '0';
+    splash.style.pointerEvents = 'none';
+    setTimeout(() => splash.remove(), 600);
+}, { once: true });
 muteBtn.addEventListener('click', e => {
     e.stopPropagation();
     audio.muted = !audio.muted;

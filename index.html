@@ -123,7 +123,13 @@
     </div>
   </section>
 
-  <audio id="bg-audio" src="audio/birthday.mp3" loop autoplay></audio>
+  <div id="splash" style="position:fixed;inset:0;z-index:9999;background:#111;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1.5rem;cursor:pointer;transition:opacity 0.6s;">
+    <div style="font-size:3.5rem;">🎂</div>
+    <p style="font-family:'TakeCoffee','Dancing Script',serif;color:#c8a96e;font-size:1.5rem;letter-spacing:0.12em;">Tap to enter</p>
+    <p style="font-family:system-ui,sans-serif;font-size:0.75rem;color:#f5ede0;opacity:0.35;letter-spacing:0.08em;">allow audio for the full experience</p>
+  </div>
+
+  <audio id="bg-audio" src="audio/birthday.mp3" loop></audio>
   <button class="mute-btn" id="mute-btn" aria-label="Toggle music">🎵</button>
 
   <div class="lightbox" id="lightbox">
